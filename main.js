@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
         const endereçoNovaImagem = $('#endereço-imagem-nova').val();
-        const novoItem = $('<li></li>');
+        const novoItem = $('<li style="display: none"></li>');
         $(`<img src="${endereçoNovaImagem}" />`).appendTo(novoItem);
         $(`
             <div class="imagemlink">
@@ -22,6 +22,7 @@ $(document).ready(function() {
         </div>
         `).appendTo(novoItem);
         $(novoItem).appendTo('ul');
+        $(novoItem).fadeIn(500);
         $('#endereço-imagem-nova').val('')
     });
 });

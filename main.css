@@ -26,13 +26,13 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 body {
-    background-color: black;
+    background-color: rgb(194, 194, 194);
 }
 
-
 header button {
-    margin-right:3px;
+    margin-right: 3px;
 }
 
 form {
@@ -44,6 +44,7 @@ form {
 
 form h2 {
     margin-bottom: 14px;
+    color: #fff;
 }
 
 input, button {
@@ -66,22 +67,23 @@ button {
 }
 
 ul {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
 ul li {
-    max-width: 23%;
+    max-width: 20%;
     list-style: none;
     position: relative;
     max-height: 280px;
     overflow-y: hidden;
+    margin-bottom: 16px;
 }
 
 ul li img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .imagemlink {
@@ -102,4 +104,57 @@ ul li img {
 
 ul li:hover .imagemlink {
     opacity: 1;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    ul li {
+        max-width: 31%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        max-width: 80%;
+    }
+
+    button {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    input {
+        width: 80%;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header h3 {
+        font-size: 16px;
+    }
+
+    ul li {
+        max-width: 100%;
+    }
+
+    input, button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
 }
